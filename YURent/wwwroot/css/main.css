@@ -1,13 +1,21 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body{
-	font-family: 'Roboto', sans-serif;
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 footer {
     background-image: url('../images/footer.png');
     background-size: cover;
-    padding-top: 100px;
+    padding-top: 10vh;
+    width:100%;
+    margin: auto;
+
 }
 
 /* #region Classes Uteis*/
@@ -104,14 +112,36 @@ footer {
     width: 800px;
     z-index: -1;
 }
+#inicio-pesquisa{
+    padding-top: 220px;
+    margin-bottom: 240px;
+}
 
-.pt-220{
-    padding-top:220px;
+.pt-220 {
+    padding-top: 220px;
 }
 
 .navbar{
     padding-right: 10%;
     padding-left: 10%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 8vw;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.categorias{
+    border-radius: 20px;
+    padding: 0px;
+    width: 1%;
+}
+
+.categorias a:hover {
+    text-decoration: none;
 }
 
 /*#region Search*/
@@ -152,4 +182,8 @@ footer {
 
 .sociais{
     font-size: 30px;
+}
+
+footer a{
+    color: white;
 }

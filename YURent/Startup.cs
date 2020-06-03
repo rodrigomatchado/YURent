@@ -20,7 +20,7 @@ namespace YURent
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<YURentContext>(options => options.UseSqlServer("Server=(localdb)\\mssqllocaldb;; Database=BookStore; Integrated Security=True"));
+            services.AddDbContext<YURentContext>(options => options.UseSqlServer("Server=(localdb)\\mssqllocaldb;; Database=Yurent; Integrated Security=True"));
             services.AddMvc();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,25 +3,75 @@
     ViewData["Title"] = "Index";
 }
 
-    <div class="container">
-        <h1 class="orange pt-220">Aluga tudo o que quiseres</h1>
-        <p>Alugar é 90% mais barato do que comprar</p>
-        <img src="~/images/drone.svg" id="imagem-inicio" />
+<div class="container" id="inicio-pesquisa">
+    <h1 class="orange">Aluga tudo o que quiseres</h1>
+    <p>Alugar é 90% mais barato do que comprar</p>
+    <img src="~/images/drone.svg" id="imagem-inicio" />
 
-        <form class="card card-sm">
-            <div class="card-body row no-gutters align-items-center">
-                <div class="col-auto">
-                    <i class="fas fa-search h4 text-body"></i>
-                </div>
-                <!--end of col-->
-                <div class="col">
-                    <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
-                </div>
-                <!--end of col-->
-                <div class="col-auto">
-                    <button class="btn btn-lg btn-orange text-white" type="submit">Procurar</button>
-                </div>
-                <!--end of col-->
+    <form class="card card-sm">
+        <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+                <i class="fas fa-search h4 text-body"></i>
             </div>
-        </form>
+            <div class="col">
+                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-lg btn-orange text-white" type="submit">Procurar</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<div class="container">
+    <div class="d-flex">
+        <div class="card col-md-2 m-2 categorias">
+            <a asp-controller="" asp-action="">
+                <img class="card-img-top" src="~/images/Categorias/cameras.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title text-center text-black-50">Câmaras</h5>
+                </div>
+            </a>
+        </div>
+        <div class="card col-md-2 m-2 categorias">
+            <a asp-controller="" asp-action="">
+                <img class="card-img-top" src="~/images/Categorias/drones.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title text-center text-black-50">Drones</h5>
+                </div>
+            </a>
+        </div>
+        <div class="card col-md-2 m-2 categorias">
+            <a asp-controller="" asp-action="">
+                <img class="card-img-top" src="~/images/Categorias/lentes.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title text-center text-black-50">Lentes</h5>
+                </div>
+            </a>
+        </div>
+        <div class="card col-md-2 m-2 categorias">
+            <a asp-controller="" asp-action="">
+                <img class="card-img-top" src="~/images/Categorias/eletronica.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title text-center text-black-50">Eletrónica</h5>
+                </div>
+            </a>
+        </div>
+        <div class="card col-md-2 m-2 categorias">
+            <a asp-controller="" asp-action="">
+                <img class="card-img-top" src="~/images/Categorias/projetores.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title text-center text-black-50">Projetores</h5>
+                </div>
+            </a>
+        </div>
+        <div class="card col-md-2 m-2 categorias">
+            <a asp-controller="" asp-action="">
+                <img class="card-img-top" src="~/images/Categorias/instrumentos.jpg" />
+                <div class="card-body">
+                    <h5 class="card-title text-center text-black-50">Instrumentos</h5>
+                </div>
+            </a>
+        </div>
     </div>
+</div>
