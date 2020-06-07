@@ -20,6 +20,6 @@ namespace YURent.Data
         public int visualizacoes { get; set; }
         public string extensao_imagem { get; set; }
         public bool ativo { get; set; }
-        public float data_publicacao { get; set; }
+        public DateTime data_publicacao { get; set; }
     }
 }

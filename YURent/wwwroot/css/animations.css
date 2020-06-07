@@ -25,7 +25,7 @@
 .fromCenter:after {
   display:block;
   content: '';
-  border-bottom: solid 3px #019fb6;  
+  border-bottom: solid 3px rgb(244, 143, 81);  
   transform: scaleX(0);  
   transition: transform 250ms ease-in-out;
 }

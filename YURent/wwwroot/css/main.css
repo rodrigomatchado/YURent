@@ -23,10 +23,7 @@ footer {
     border-radius: 150px;
     width: 100px;
 }
-.avatar-perfil {
-    border-radius: 150px;
-    width: 200px;
-}
+
 
 /* #region Classes Uteis*/
 .orange {
@@ -47,6 +44,26 @@ footer {
 }
 .dropdown-item ::after {
     background-color: rgb(255, 97, 0);
+}
+
+.flex{
+    display: flex;
+}
+
+.link {
+    color: rgb(244, 143, 81);
+    text-decoration:none;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: rgb(244, 143, 81);
+}
+
+@media screen and (max-width: 768px) {
+    .flex {
+        display: block;
+    }
 }
 /* #endregion*/
 /* #region Modal */
@@ -135,7 +152,7 @@ footer {
     padding-left: 10%;
 }
 
-.card-img-top {
+.categorias img {
     width: 100%;
     height: 8vw;
     object-fit: cover;
@@ -146,7 +163,6 @@ footer {
 .categorias{
     border-radius: 20px;
     padding: 0px;
-    width: 1%;
 }
 
 .categorias a:hover {
@@ -185,12 +201,83 @@ footer {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.pr-300{
-    padding-right: 300px;
+.avatar-perfil {
+    border-radius: 150px;
+    width: 200px;
+}
+#desc-perfil {
+    padding: 0px 20px 5px 10px;
+    text-align: justify;
+    margin-top: 30px;
 }
 
+.margin{
+    margin-right: 10px;
+}
 .fa-check-circle{
     color: limegreen;
+}
+
+#botaomensagem {
+    color: rgb(244, 143, 81);
+    padding: 8px;
+}
+
+#avatar-avaliacao{
+    border-radius: 150px;
+    width: 100px;
+}
+
+#star-avaliacao{
+    width: 100px;
+}
+
+.avaliacao {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.07);
+    margin: 20px, 10px, 20px, 0px;
+    padding: 10px;
+}
+
+.outrosprodutos {
+    padding: 0px;
+    width: 100%;
+    margin-top: 1vw;
+}
+
+#imagem-anuncio {
+    width: 100%;
+}
+
+.star-produto{
+    margin-top: -10px;
+    width: 100px;
+}
+
+#aval-perfil {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #desc-perfil {
+        padding: 0px 40px 5px 40px;
+        align-content: center;
+        margin-top: 10px;
+    }
+    .avaliacao{
+        margin-top: 10px;
+    }    
+    #aval-perfil {
+        padding: 0px 40px 20px 40px;
+    }
+    #outrosprodutos {
+        padding: 0px 40px 20px 40px;
+        background-color: white;
+    }
+    #imagem-anuncio {
+        width: 70%;
+    }
 }
 /* #endregion */
 /* #region Login Facebook/Google */
@@ -224,4 +311,8 @@ footer {
 
 footer a{
     color: white;
+}
+
+.jumbotron{
+    background-color: white;
 }
