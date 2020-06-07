@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>YURent | @ViewBag.Title</title>
 
 
     <!-- Google Fonts -->
@@ -11,7 +11,8 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Meu CSS -->
-    <link href="~/css/main.css" rel="stylesheet" />    
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/animations.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Favicon -->
@@ -21,21 +22,21 @@
 <body>
     @* INÍCIO *@
 
+    @*@await Html.PartialAsync("_LoggedIn")*@
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top text-right">
         <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img width="70" height="50" src="~/images/logo.png" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item active fromCenter">
                     <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item fromCenter">
                     <a class="nav-link" asp-controller="Home" asp-action="Index">Anunciar</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown fromCenter">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Mais
                     </a>
@@ -67,17 +68,16 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
+                    <a href="#" class="btn btn-block" id="fb">
+                        <i class="fab fa-facebook fa-fw "></i>Entrar com Facebook
+                    </a>
+
+                    <a href="#" class="btn btn-block" id="google">
+                        <i class="fab fa-google fa-fw"></i> Entrar com Gmail
+                    </a>
+                    <br />
                     <form asp-action="login" method="post">
-                        <a href="#" class="btn btn-block" id="fb">
-                            <i class="fab fa-facebook fa-fw"></i>Entrar com Facebook
-                        </a>
-
-                        <a href="#" class="btn btn-block">
-                            <i class="fab fa-google fa-fw"></i> Entrar com Gmail
-                        </a>
-
-
-                        <br />
+                        
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="Email" required="required">
                         </div>
@@ -105,6 +105,14 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
+                    <a href="#" class="btn btn-block" id="fb">
+                        <i class="fab fa-facebook fa-fw"></i>Registar com Facebook
+                    </a>
+
+                    <a href="#" class="btn btn-block" id="google">
+                        <i class="fab fa-google fa-fw"></i>Registar com Gmail
+                    </a>
+                    <br />
                     <form asp-action="login" method="post">
                         <div class="form-group">
                             <input type="email" class="form-control" name="email" placeholder="Email" required="required">
@@ -129,8 +137,6 @@
     <div>
         @RenderBody()
     </div>
-
-    <partial />
 
     @await Html.PartialAsync("_Footer")
 
