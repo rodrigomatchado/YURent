@@ -21,10 +21,8 @@ footer {
 
 .avatar{
     border-radius: 150px;
-    width: 100px;
+    width: 50px;
 }
-
-
 /* #region Classes Uteis*/
 .orange {
     color: rgb(244, 143, 81);
@@ -276,7 +274,12 @@ footer {
         background-color: white;
     }
     #imagem-anuncio {
-        width: 70%;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .p-md-60 {
+        padding-left: 60px;
     }
 }
 /* #endregion */

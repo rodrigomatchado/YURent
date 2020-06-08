@@ -1,46 +1,63 @@
 ﻿@{
 }
 
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top text-right">
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     <a class="navbar-brand" asp-controller="Home" asp-action="Index"><img width="70" height="50" src="~/images/logo.png" /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active fromCenter">
-                <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item fromCenter">
-                <a class="nav-link" asp-controller="Home" asp-action="Index">Anunciar</a>
-            </li>
-            <li class="nav-item dropdown fromCenter">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mais
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" asp-controller="Home" asp-action="Index">FAQ</a>
-                    <a class="dropdown-item" asp-controller="Home" asp-action="Index">Garantia</a>
-                    <a class="dropdown-item" asp-controller="Home" asp-action="Index">Como Funciona</a>
-                </div>
-            </li>
-        </ul>
 
-    </div>        
-    <ul class="navbar-nav justify-content-end">
-        <li class="nav-item">
-            <a class="nav-link" href="">Modo Vendedor</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="avatar" src="~/images/Avatar.png" />
+
+    @* VISIVEL APENAS NO PC *@
+    <div class="navbar-nav d-none d-md-flex">
+        <div class="navbar-nav align-items-center">
+            <a class="nav-item nav-link" asp-controller="Painel" asp-action="Index">Painel<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" asp-controller="Painel" asp-action="Index">Meus Anuncios</a>
+            <a class="nav-item nav-link" asp-controller="Painel" asp-action="Index">Mensagens</a>
+            <a class="nav-item nav-link" asp-controller="Painel" asp-action="Index">Estatistícas</a>
+            <a class="nav-item nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Mais
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" asp-controller="Home" asp-action="Index">Painel</a>
-                <a class="dropdown-item" asp-controller="Home" asp-action="Index">Mensagens</a>
-                <a class="dropdown-item" asp-controller="Home" asp-action="Index">Sair</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="Index">FAQ</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="Index">Garantia</a>
+                <a class="dropdown-item" asp-controller="Home" asp-action="Index">Como Funciona</a>
             </div>
-        </li>
-    </ul>
+        
+            <div class="d-flex justify-content-end ">
+                <div class="nav-item align-self-center">
+                    <a class="link" href="">Modo Comprador</a>
+                </div>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="avatar" src="~/images/Avatar.png" />
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuAvatar">
+                        <a class="dropdown-item" asp-controller="Home" asp-action="Index">Favoritos</a>
+                        <a class="dropdown-item" asp-controller="Home" asp-action="Index">Definicões</a>
+                        <a class="dropdown-item" asp-controller="Home" asp-action="Index">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    @*VISIVEL APENAS NO TELEMOVEL E TABLET*@
+    <div class="d-block d-md-none justify-self-end">    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-nav">
+                <a class="nav-item link" asp-controller="Home" asp-action="Index">Modo Comprador</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Painel</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Meus Anuncios</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Mensagens</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Estatistícas</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Favoritos</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Definicões</a>
+                <a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Sair</a>
+            </div>
+        </div>
+    </div>
 
 </nav>

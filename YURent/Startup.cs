@@ -10,6 +10,8 @@ using Microsoft.Extensions.Hosting;
 using YURent.Data;
 using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace YURent
 {
@@ -25,7 +27,8 @@ namespace YURent
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
+           // services.AddDbContext<AppDbContext>(options => options.UseMySql());
+            services.AddRazorPages();
             services.AddMvc();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

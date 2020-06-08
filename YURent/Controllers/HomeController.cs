@@ -17,7 +17,7 @@ namespace YURent.Controllers
         public IActionResult ResultadoPesquisa()
         {
             return View();
-        } 
+        }
 
         public IActionResult Perfil()
         {
