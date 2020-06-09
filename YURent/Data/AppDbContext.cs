@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace YURent.Data
-{ 
+{
     public class AppDbContext : DbContext
     {
         public DbSet<anuncio> anuncio { get; set; }
@@ -25,11 +27,8 @@ namespace YURent.Data
 
         public DbSet<verificacao> verificacao { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=master;Data Source=DESKTOP-871D8P9/MSSQLSERVER01");
-        }
-
+        
+        
     }
 }
 

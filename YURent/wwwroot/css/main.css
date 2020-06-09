@@ -283,6 +283,61 @@ footer {
     }
 }
 /* #endregion */
+/* #region Painel */
+#avatar-painel{
+    margin-top: 15px;
+    border-radius: 150px;
+    width: 150px;
+}
+#star-painel{
+    padding-bottom: 15px;
+    width: 120px;
+}
+.correio {
+    margin-top: 20px;
+    background-color: white;
+}
+.mensagem-naovista {
+    padding-right: 0px;
+    background-color: rgb(244, 143, 81);
+    padding: 10px;
+    color: white;
+}
+.mensagem-naovista:hover{
+    background-color: rgb(245, 124, 51);
+    color: white;
+}
+
+.mensagem-vista {
+    background-color: white;
+    padding: 10px;
+}
+.mensagem-vista:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.correio-header{
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px 20px 10px 20px;
+}
+.correio-header h6{
+    font-weight: normal;
+}
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+}
+.imagem-estado {
+    height: 70px;
+    width: 100px;
+}
+.imagem-aceitar {
+    height: 50px;
+    width: 50px;
+}
+/* #endregion */
 /* #region Login Facebook/Google */
 #fb {
     background-color: #3B5998;

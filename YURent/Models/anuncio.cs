@@ -21,5 +21,7 @@ namespace YURent.Data
         public string extensao_imagem { get; set; }
         public bool ativo { get; set; }
         public DateTime data_publicacao { get; set; }
+
+
     }
 }
